@@ -4,7 +4,9 @@
     {% for note in notes %}
     <div class="col">
         <div class="p-3 border">
-            {{ note.title }}
+            <a href="{% url 'notes.detial' pk=note.id %}" class="text-dark text decoration-non">
+                <h3>{{ note.title }}</h3>
+            </a>
             <br>
             <!-- displays the first 10 characters of the text and prints ... after that. -->
             {{ note.text|truncatechars:10 }}
