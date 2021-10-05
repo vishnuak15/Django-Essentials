@@ -6,6 +6,13 @@ class NotesForm(forms.ModelForm):
     class Meta:
         model = Notes 
         fields = ('title', 'text')
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control my-5'}),
+            'text': forms.Textarea(attrs={'class': 'form-control my-5'}),
+        }
+        labels = {
+            'text': 'Write your thoughts here'
+        }
 
     def clean_title(self):#accepts only the data according to the conditions given below
         title = self.cleaned_data['title']
