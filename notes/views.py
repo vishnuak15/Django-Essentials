@@ -4,10 +4,11 @@ from django.views.generic import ListView, DetailView, CreateView
 
 # Create your views here.
 from .models import Notes
+from .forms import *
 
 class NotesCreateView(CreateView):
     model = Notes
-    fields = ['title', 'text']
+    form_class = NotesForm
     success_url = '/smart/notes'
 class NotesListView(ListView):
     model = Notes
