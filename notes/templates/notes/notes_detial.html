@@ -3,4 +3,7 @@
     <h1 class="my-5">{{ notes.title }}</h1>
     <p> {{ notes.text }}</p>
 </div>
-{% endblock %}
+<br>
+<a href="{% url 'notes.list' %}" class="btn btn-secondary">
+    Back
+</a> {% endblock %}
