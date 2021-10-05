@@ -6,4 +6,10 @@
 <br>
 <a href="{% url 'notes.list' %}" class="btn btn-secondary">
     Back
+</a>
+<a href="{% url 'notes.update' pk=notes.id %}" class="btn btn-primary">
+    Edit
+</a>
+<a href="{% url 'notes.delete' pk=notes.id %}" class="btn btn-danger">
+    Delete
 </a> {% endblock %}
